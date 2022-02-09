@@ -1,0 +1,227 @@
+1*{
+    margin: 0;
+    padding: 0;
+    font-family: 'popins' sans-serif;
+
+}
+section
+{position: relative;
+width: 100%;
+min-height: 100vh;
+display:flex;
+ justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+header{
+position: absolute;
+top: 0;
+Left: 0;
+width: 100%;
+padding: 40px 100px;
+z-index: 100;
+display: flex;
+justify-content: space-between; align-items: center;
+align-items: center;
+}
+header .logo
+{
+position: relative; font-weight: 700;
+font-size: 2em;
+color: #111;
+text-transform: uppercase;
+text-decoration: none;
+text-shadow: 2px 2px 0 rgba(0,0,0.1);
+}
+section video
+{
+position: absolute;
+top: 0;
+Left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+header .toggle
+{
+position: relative;
+right: 250px;
+width: 40px;
+height: 40px;
+background: url(Images/menu-removebg-preview.png); 
+background-position: center; 
+background-repeat: no-repeat; 
+cursor: pointer; 
+background-size: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+header .toggle.active
+{
+    background-image: url(images/close.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-size: 25px;
+
+}
+header .toggle.active:before{
+    content: 'close';
+}
+header .toggle:before
+{
+    content: 'Menu';
+    position: absolute;
+    right: 45px;
+    text-transform:uppercase ;
+    color: #111;
+    letter-spacing: 2px;
+    font-size: 14px;
+    padding: 2px 5px;
+    background:black;
+    color: white;
+}
+.glass
+{
+position: absolute;
+top: 0;
+Left: 0;
+width: 40%;
+height: 100%;
+backdrop-filter: blur(15px);
+z-index: 1;
+box-shadow: 10px 0 15px rgba(0,0,0,0.1); 
+transition: 0.5s;
+transition-delay: 0.5s;
+}
+section.active .glass
+{
+    width: 100%;
+    backdrop-filter: blur(20px);
+    box-shadow: 10px 0 15px rgba(0,0,0,0.5);
+    transition-delay: 0s;
+}
+section .content
+{ position: relative;
+z-index: 10;
+text-align: center; 
+transition: 0.5s; 
+transition-delay: 0.5s;
+}
+section.active .content
+{
+    opacity: 0;
+    visibility:hidden ;
+    transform: translate(-200px);
+    transition-delay: 0s;
+}
+section .content h2
+{
+position: relative;
+color: white;
+font-size: 10VW;
+Line-height: 0.55em;
+text-shadow: 0 5px 5px rgba(250, 241, 241, 0.2);
+font-family: 'Dancing Script', cursive;
+}
+section .content h2 span
+{
+font-size: 0.2em;
+font-weight: 300;
+Letter-spacing: 5px;
+background: black;
+color: white;
+padding:0 10px;
+text-shadow: 0 5px 5px rgba(0,0,0,0);
+box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+text-transform: uppercase;
+}
+section .sci{
+    position:absolute;
+    bottom: 40px;
+    right: 100px;
+    display: flex;
+    z-index: 100;
+}
+section .sci li{
+    list-style: none;
+    margin: 5px;
+    padding: 0 6px;
+    background: black;
+    transition: 0.5s;
+    transition-delay: calc(0.2s * var(--));
+}
+section.active .sci li a
+{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+}
+section.active .sci::after li a
+{opacity: 0;
+visibility: hidden;}
+section .sci li a{
+    color: white;
+    text-decoration: double;
+    display: inline-block;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+header a img{
+    border: 2px
+    solid black;
+    border-radius: 90px;
+}
+section .nav
+{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+
+}
+section .nav li 
+{
+   list-style: none;
+   text-align: center;
+   margin: 15px 0;
+   opacity: 0;
+   visibility: hidden;
+   transition: 0.5s;
+   transform: translateX(200px); 
+   animation-delay: calc(0.2s);
+   animation-name: 123 ;
+   animation-fill-mode: alternate;
+   animation-timing-function: ease-in-out;
+}
+section.active .nav li
+{opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+
+}
+
+section .nav li a {
+color:white;
+    font-size: 1.5em;
+    Letter-spacing: 4px;
+    text-decoration: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    background: black;
+    padding: 4px 10px;
+    display: inline-block;
+    border: 1px
+    solid saddlebrown;
+    border-radius: 20px;
+    }
+    section .nav li a:hover {
+    background: white;
+color: #111;
+letter-spacing: 10px;
+text-transform: lowercase;
+}

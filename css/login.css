@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+section
+{position: relative;
+width: 100%;
+min-height: 100vh;
+display:flex;
+ justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+section video
+{
+position: absolute;
+top: 0;
+Left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.container
+{
+position: relative;
+max-width: 1200px;
+display:flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+z-index: 1;
+}
+.container .card{
+   position: relative;
+    width: 280px;
+    height: 480px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top:1px solid rgba(255,255,255,0.5) ;
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+}
+.container .card .content
+{
+    padding: -110px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+    color: white;
+}
+.container .card:hover .content
+{transform: translateY(0px);
+opacity: 1;}
+.container .card .content h1
+{
+    position:absolute;
+    top: -90px;
+    right:10px;
+    font-size: 3em;
+color: grey;
+pointer-events: none;
+}
+.container .card .content input
+{font-size: 0.8em;
+color: black;
+font-weight: 300;
+}
+.container .card .content form
+{
+position: relative;
+display: inline-block;
+padding: 8px 20px;
+margin-top: 15px;
+background: white;
+color: black;
+border-radius: 20px;
+text-decoration: dotted;
+font-weight: 500;
+box-shadow: 0 5px rgba(255,255,255,0.3);
+}
+section .sci{
+    position:absolute;
+    bottom: 20px;
+    right: 5px;
+    display: flex;
+    z-index: 100;
+}
+section .sci li{
+    list-style: none;
+    margin: 5px;
+    padding: 0 6px;
+    background: white;
+    transition: 0.5s;
+    transition-delay: calc(0.2s * var(--));
+}
+section.active .sci li a
+{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+}
+section.active .sci::after li a
+{opacity: 0;
+visibility: hidden;}
+section .sci li a{
+    color:black;
+    text-decoration: double;
+    display: inline-block;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;}
+    .toggle-btn{
+        padding: 10px 30px;
+        cursor:pointer;
+        background: transparent;
+        bottom: 0;
+        outline: none;
+        position: relative;
+        border-radius: 10px;
+        color: white;
+        background:linear-gradient(red,purple);
+        transition: .5s;
+    }
+    .group{
+        height: 180px;
+        transition: .5s;
+        width: 180px;
+    }
+    .input-field
+    {
+        width: 100%;
+        padding: 10px 0;
+        margin: 5px 0;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid black;
+      outline: none;
+      background: transparent;
+    }
+    .submitbtn
+    {
+        width: 65%;
+        padding: 2px 5px;
+        cursor: pointer;
+        display: block;
+        margin: auto;
+        background: transparent;
+        border: 0;
+        outline: none;
+        border-radius: 20px;
+    }
+    #click{
+        display: none;
+        background-color:black;
+      }
+      label{
+       
+        color:rgb(182, 12, 12);
+        cursor: pointer;
+      }
+      label i{
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        transition: all 0.4s ease;
+        background-color: #fa4299;
+      }
+      label i.fas{
+        opacity: 0;
+        pointer-events: none;
+      }
+      #click:checked ~ label i.fas{
+        opacity: 1;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) rotate(180deg);
+        background-color: #fa4299;
+      }
+      #click:checked ~ label i.fab{
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+      .wrapper{
+        position: absolute;
+        right: 30px;
+        bottom: 0px;
+        max-width: 280px;
+        background:skyblue;
+        border-radius: 20px;
+        box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+        border: 2px
+        solid white;
+      }
+      #click:checked ~ .wrapper{
+        opacity: 1;
+        bottom: 85px;
+        pointer-events: auto;
+      }
+      .wrapper .head-text{
+        line-height: 30px;
+        color:white;
+        border-radius: 15px 15px 0 0;
+        padding: 0 20px;
+        font-weight: 500;
+        font-size: 11px;
+        background: -webkit-linear-gradient(left,lightseagreen, #fa4299);
+      }
+      .wrapper .chat-box{
+        padding: 20px;
+        width: 80%;
+      }
+      .chat-box .desc-text{
+        color:black;
+        text-align: center;
+        line-height: 25px;
+        font-size: 8px;
+        font-weight: 400;
+        border: 1px
+        solid lightseagreen;
+        border-radius: 10px;
+        background-color:lightblue;
+        padding: 5px;
+      }
+      .chat-box form{
+        padding: 5px 10px;
+        margin: 10px 0;
+        border-radius: 35px;
+        border: 1px solid lightseagreen;
+      }
+      .chat-box form .field{
+        height: 40px;
+        width: 80%;
+        margin-top: 20px;
+      }
+      .chat-box form .field:last-child{
+        margin-bottom: 15px;
+      }
+      form .field input,
+      form .field button,
+      form .textarea textarea{
+        width: 170px;
+        height: 40px;
+        padding-left: 20px;
+        border: 1px solid lightseagreen;
+        outline: none;
+        border-radius: 25px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+      form .field input:focus,
+      form .textarea textarea:focus{
+        border-color: red;
+      }
+      form .field input::placeholder,
+      form .textarea textarea::placeholder{
+        color:lightseagreen;
+        transition: all 0.3s ease;
+      }
+      form .field input:focus::placeholder,
+      form .textarea textarea:focus::placeholder{
+        color: lightseagreen;
+      }
+      .chat-box form .textarea{
+        height: 20px;
+        width: 140px;
+      }
+      .chat-box form .textarea textarea{
+        height: 20px;
+        border-radius: 40px;
+        resize: none;
+        padding: 15px 20px;
+        font-size: 16px;
+      }
+      .chat-box form .field button{
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color:black;
+        font-size: 18px;
+        font-weight: 500;
+        background: -webkit-linear-gradient(left,lightseagreen, #fa4299);
+        transition: all 0.3s ease;
+      }
+      .chat-box form .field button:active{
+        transform: scale(0.97);
+      }
+      

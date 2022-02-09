@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+::selection{
+    color: #fff;
+    background: black;}
+
+::-webkit-scrollbar{
+    width: 3px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+    background: black;
+}
+::-webkit-scrollbar-thumb{
+    background:black;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: black;
+}
+
+.wrapper{
+    width: 370px;
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid black;
+    border-top: 0px;
+}
+.wrapper .title{
+    background: black;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    text-align: center;
+    border-bottom: 3px solid red;
+    border-radius: 5px 5px 0 0;
+}
+.wrapper .form{
+    padding: 20px 15px;
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.wrapper .form .inbox{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+.wrapper .form .user-inbox{
+    justify-content: flex-end;
+    margin: 13px 0;
+}
+.wrapper .form .inbox .icon{
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    background: red;
+}
+.wrapper .form .inbox .msg-header{
+    max-width: 53%;
+    margin-left: 10px;
+}
+.form .inbox .msg-header p{
+    color: #fff;
+    background: red;
+    background-image: url(https://freesvg.org/img/1538298822.png);
+    border-radius: 10px;
+    padding: 8px 10px;
+    font-size: 14px;
+    word-break: break-all;
+}
+.form .user-inbox .msg-header p{
+    color:white;
+    background: black;
+}
+.wrapper .typing-field{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background: black;
+    border-top: 1px solid #d9d9d9;
+    border-radius: 30px 30px 10px 10px;
+}
+.wrapper .typing-field .input-data{
+    height: 40px;
+    width: 335px;
+    position: relative;
+}
+.wrapper .typing-field .input-data input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    padding: 0 80px 0 15px;
+    border-radius: 30px;
+    font-size: 11px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+.typing-field .input-data input:focus{
+    border-color: rgba(0,123,255,0.8);
+}
+.input-data input::placeholder{
+    color: #999999;
+    transition: all 0.3s ease;
+}
+.input-data input:focus::placeholder{
+    color: #bfbfbf;
+}
+.wrapper .typing-field .input-data button{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    height: 30px;
+    width: 65px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    background: #007bff;
+    border: 1px solid #007bff;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+.wrapper .typing-field .input-data input:valid ~ button{
+    opacity: 1;
+    pointer-events: auto;
+}
+.typing-field .input-data button:hover{
+    background: #006fef;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+section
+{position: relative;
+width: 100%;
+min-height: 100vh;
+display:flex;
+ justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+section video
+{
+position: absolute;
+top: 0;
+Left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.container
+{
+position: relative;
+max-width: 1200px;
+display:flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+z-index: 1;
+}
+.container .card{
+   position: relative;
+    width: 365px;
+    height: 520px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 30px;
+    background: rgba(255,255,255,0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top:1px solid rgba(255,255,255,0.5) ;
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+}
+.container .card .content
+{
+    padding: -110px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+    color: red;
+}
+.container .card:hover .content
+{transform: translateY(0px);
+opacity: 1;}
+
+.container .card .content h2
+{
+    position:absolute;
+    top: -110px;
+    right:10px;
+    font-size: 3em;
+color: grey;
+pointer-events: none;
+}
+.container .card .content h3
+{
+    font-size: 2em;
+     color: black;
+     z-index: 1;
+}
+.container .card .content p
+{font-size: 0.8em;
+color: white;
+font-weight: 300;
+}
+.container .card .content a
+{
+position: relative;
+display: inline-block;
+padding: 8px 20px;
+margin-top: 15px;
+background: black;
+color:white;
+border-radius: 20px;
+text-decoration: dotted;
+font-weight: 500;
+box-shadow: 0 5px rgba(255,255,255,0.3);
+
+}
